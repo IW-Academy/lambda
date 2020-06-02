@@ -20,6 +20,19 @@ var/
 .serverless
 serverless.yml
 
-package.json
-
 node_modules/*
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Other random crap
+.idea/*
+createtable.sh
+serverless.yml
+__pycache__/

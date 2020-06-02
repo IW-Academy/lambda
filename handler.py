@@ -1,4 +1,5 @@
 import json
+import pymysql
 from ETL import run_etl
 
 def auto_etl(event, context):
@@ -21,9 +22,12 @@ def auto_etl(event, context):
 
     # Use this code if you don't use the http event with the LAMBDA-PROXY
     # integration
-    """
-    return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
-    }
-    """
+    # """
+    # return {
+    #     "message": "Go Serverless v1.0! Your function executed successfully!",
+    #     "event": event
+    # }
+    # """
+    
+if __name__ == "__main__":
+    auto_etl('{"Records":[{"s3":{"object":{"key":"transactions/test.csv"}}}]}', '')
